@@ -1,0 +1,62 @@
+body {
+    background-color: #fff;
+}
+
+.container {
+    margin-top: 44px;
+padding: 10px;
+}
+.container .search {
+    border: 1px solid #006699;
+    height: 30px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+input {
+    outline: 0;
+    border: 0;
+}
+input[type='text'] {
+    width: 100%;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+}
+input[type='button'] {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    height: 28px;
+    border: 1px solid #006699;
+    background-color:#006699;
+    width: 60px;
+    color: #fff;
+    border-radius: 0;
+}
+.container h5 span {
+    font-size: 14px;
+    margin: 5px;
+}
+.container h5 {
+    height: 30px;
+}
+.search-list {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 44px;
+    bottom: 50px;
+/* 绝对定位的盒子可用靠left right， top bottom确定它的宽高*/
+}
+.search-list .search-bar {
+    text-align: center;
+    width: 50%;
+    padding:  8px 0;
+    border-right: 3px solid #fff;
+    background: #efeff4;
+    font-size: 14px;
+}
+.product li {
+    border: 1px solid #006699;
+}

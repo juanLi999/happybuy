@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="assets/mui/css/iconfont.css">
+    <script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="js/cart.js"></script>
+    <script src='js//public.js'></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="mask"></div>
+    <header class="mui-bar mui-bar-nav header">
+        <h1 class="mui-title">购物车</h1>
+        <a href="search.html" class="mui-icon mui-icon-search mui-pull-right"></a>
+    </header>
+    <nav class="mui-bar mui-bar-tab footer">
+        <a class="mui-tab-item mui-active" href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="cart.html">
+            <span class="mui-icon iconfont icon-gouwuche "></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="user.html">
+            <span class="mui-icon mui-icon-person"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+    <div class="cartlist">
+        <ul class="mui-table-view" id='cartBox'>
+
+        </ul>
+        <script type='text/template' id='editGoods'>
+            <h5>编辑商品</h5>
+            <div class="sizeDetail">
+                  <% var psize = productSize.split('-');%>
+                <span>尺码：</span>
+                <% for(var i = psize[0]; i <= psize[1]; i++){%>
+                    <span><%=i%></span>
+
+                   
+                <% }%>
+            </div>
+            数量：
+            <div class="mui-numbox"  data-numbox-max='<%=productNum%>'>
+                <button class="mui-btn mui-numbox-btn-minus" type="button" id='reduce'>-</button>
+                <input class="mui-numbox-input" type="number" value='<%=num%>' id ='num'/>
+                <button class="mui-btn mui-numbox-btn-plus" type="button" id ='increase'>+</button>
+            </div>
+            <div class="btn">
+                <button id ='confirm'>确定</button>
+                <button id='cancel'>取消</button>
+            </div>
+        </script>
+        <div class="sizeBox">
+
+        </div>
+    </div>
+
+
+    <script id='cartTpl' type='text/template'>
+        <% for (var i = 0; i < res.length; i++ ) {%>
+        <li class="mui-table-view-cell mui-media">
+                <div class="mui-slider-right mui-disabled">
+                        <span class="mui-btn mui-btn-blue mui-btn  edit-btn"  data-id="<%=res[i].id %>">编辑</span>
+                        <a href="javascript:;" class="mui-btn mui-btn-red delete-btn" data-id="<%=res[i].id %>">删除</a>
+                    </div>
+                <a href="detail.html?id=<%=res[i].productId%>" class='mui-slider-handle'>   
+                    <img class="mui-media-object mui-pull-left" src="<%=res[i].pic[0].picAddr%>">
+                    <div class="mui-media-body ">
+                        <p class='mui-ellipsis'><%=res[i].proName%></p>
+                        <input type="checkbox" class='choose'/>
+                        <span >价格：￥ <b class='price'><%=res[i].price%></b></span>
+                        <span>鞋码： <b class='size'><%=res[i].size%></b></span>
+                        <span>数量：<b  class='sl'><%=res[i].num%></b></span>
+                    </div>
+                </a>
+            </li>
+           
+       <% }%>
+       <h4>订单总额：<span id ="total">0</span>
+        <button id='pay' >结算</button></h4>
+        <input type="checkbox" value="" id="checkAll">全选
+    </script>
+
+</body>
+
+</html>

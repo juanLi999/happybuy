@@ -1,0 +1,265 @@
+ul li {
+    list-style: none;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+.footer,.header{
+	background:#006699;
+	
+}
+ header .mui-title {
+    color: #fff;
+}
+header .mui-icon-search {
+    color: #fff;
+}
+.mui-slider-item a {
+    display: block;
+    width: 100%;
+}
+.mui-slider-item a img {
+    width: 100%;
+    display: block;
+}
+.nav-link a {
+float: left;
+display: block;
+width: 33.33%;
+}
+.nav-link a img {
+    display: block;
+    width: 100%;
+}
+.brand img {
+    width: 100%;
+}
+.brand .list a {
+float: left;
+width: 25%;
+}
+.brand .list a img {
+    display: block;
+    width: 100%;
+}
+.product .list img {
+width: 100%;
+}
+.product .list  a img {
+    display: block;
+    width: 100%;
+}
+.product>img {
+    width: 100%;
+}
+.product li {
+    width: 50%;
+    float: left;
+}
+.product .list  a img {
+    width: 100%;
+    display: block;
+}
+.product .name {
+    line-height: 18px;
+    display: block;
+    color: #8f8f94;
+    text-align: center;
+    padding: 6px;
+    font-size: 14px;
+    height: 44px;
+    overflow: hidden;
+}
+.product .buy-now {
+    background: #006699;
+    color: #FFF;
+    margin: 0 auto;
+    border: none;
+    display: block;
+    margin-bottom: 10px;
+}
+/* .product .buy-now {
+    background: #006699;
+    color: #FFF;
+    margin: 0 auto;
+    display: block;
+    line-height: 40px;
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+} */
+.product p{
+    text-align: center;
+}
+.product p span:last-child {
+    color: #ccc;
+    text-decoration: line-through;
+    margin-left: 2px;
+}
+.product p span:first-child {
+    /* margin-left: 50px; */
+    color: #f30;
+    margin-right: 2px;
+}
+#register-btn {
+ width: 100%;
+}
+.price {
+    color: red;
+}
+
+.price .lineT {
+    text-decoration: line-through;
+    color: #CCC;
+    font-size: 14px;
+}
+#detailText {
+    font-size: 14px;
+}
+.size ,.price{
+    margin: 0 10px;
+}
+.size {
+    overflow: hidden;
+}
+.size span {
+    text-align: center;
+    line-height: 28px;
+    font-size: 14px;
+    float: left;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ccc;
+    margin: 3px ;
+}
+.num {
+    padding: 10px;
+    /* line-height: 28px; */
+    /* 父元素的高度靠子元素撑开，所以父元素的高度和input的高度一样， */
+    font-size: 14px;
+}
+.num #reduce,#increase {
+    padding: 10px;  
+    font-size: 20px;
+}
+.num input {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 28px;
+    height: 28px;
+}
+.cart {
+padding:  10px;
+overflow: hidden;
+}
+.cart a {
+    float: left;
+    width: 50%;
+    color: #fff;
+    font-size: 14px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+}
+.cart a:first-of-type {
+    background-color: orangered;
+}
+.cart a:last-of-type {
+    background-color: #e92322;
+}
+/* .mui-bar-tab~.mui-content {
+    padding-bottom: 0px;
+} */
+.active {
+    background-color: orange;
+}
+.cartlist {
+    color: #ccc;
+    margin-top: 44px;
+    margin-bottom: 50px;
+}
+.cartlist span:first-of-type {
+    color: #e92322;
+    font-size: 14px;
+}
+.cartlist span:last-of-type {
+    font-size: 14px;
+}
+b {
+    font-weight: normal;
+    margin: 0;
+}
+
+.size span {
+    font-size: 14px;
+}
+/* 尺码盒子 */
+.sizeBox {
+   
+    opacity: 0;
+    width:  270px;
+    height: 360px;
+    margin: 0 auto;
+    /* background-color: pink; */
+    border-radius: 10px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 10;
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sizeBox h5 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 18px;
+}
+.sizeDetail {
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+}
+.sizeDetail span {
+    float: left;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    color: #000;
+}
+.sizeDetail span:first-of-type {
+    width: 60px;
+    border: 0;
+}
+.btn {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.btn button {
+    padding: 0;
+  height: 40px;
+    float: left;
+    width: 50%;
+    color: #006699;
+font-weight:  600;
+}
+.mask {
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background-color: #ccc;
+    opacity: 0.5;
+}
